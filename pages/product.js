@@ -16,7 +16,7 @@ module.exports = createPageObjects({
             theProductCouldBeOrdered: function() {
                 var button = element(by.control({
                     controlType: 'sap.m.Button',
-                    I18NText: {
+                    i18NText: {
                         propertyName: "text",
                         key: "addToCartShort"
                     }
