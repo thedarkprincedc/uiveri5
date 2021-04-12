@@ -18,18 +18,18 @@ steps:
   displayName: NPM Install
   inputs:
     command: 'install'
-# - task: Npm@1
-#   displayName: NPM Run Tests (Chrome Headless)
-#   inputs:
-#     command: 'custom'
-#     customCommand: 'run e2e:ci' 
-- task: PowerShell@2
+- task: Npm@1
+  displayName: NPM Run Tests (Chrome Headless)
   inputs:
-    filePath: 'node uiveri5 conf-ci.js'
-    failOnStderr: true
-    arguments: 
-     -params.user=$(user)
-     -params.password=$(password)
+    command: 'custom'
+    customCommand: 'run e2e:ci' 
+# - task: PowerShell@2
+#   inputs:
+#     filePath: 'node uiveri5 conf-ci.js'
+#     failOnStderr: true
+#     arguments: 
+#      -params.user=$(user)
+#      -params.password=$(password)
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
