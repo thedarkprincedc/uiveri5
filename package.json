@@ -2,7 +2,9 @@
   "name": "uiveri5",
   "private": true,
   "scripts": {
-    "test": "uiveri5"
+    "test": "uiveri5",
+    "e2e:ci": "uiveri5 --timeouts.defaultTimeoutInterval=500000 ci-conf.js",
+    "test:e2e": "uiveri5 --params.user=<user> --params.pass=<password> ci-conf.js"
   },
   "devDependencies": {
     "@ui5/uiveri5": "^1.42.3"
