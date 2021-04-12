@@ -4,6 +4,7 @@ require('../pages/product');
 describe("teched", function () {
 	it("Should validate the home screen", function () {
         Then.onTheHomePage.iShouldSeeAllCategories();
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
     });
     it("Should search for a product", function () {
         When.onTheHomePage.iSearchForProduct();
