@@ -27,7 +27,7 @@ steps:
   displayName: NPM Run Tests (Chrome Headless)
   inputs:
     command: 'custom'
-    customCommand: 'run test:ci -- --params.user=$(user) --params.password='$(password)'' 
+    customCommand: "run test:ci -- --params.user=$(user) --params.password='$(password)'"
 # - task: PowerShell@2
 #   inputs:
 #     filePath: 'node uiveri5 conf-ci.js'
