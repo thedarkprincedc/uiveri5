@@ -10,8 +10,7 @@ pool:
   vmImage: ubuntu-latest
 variables:
   System.Debug: true
-  user: "rojwcocmewcwd"
-  password: "feomfomwojmwc"
+  group: test_user
 steps:
 
 - task: Npm@1
