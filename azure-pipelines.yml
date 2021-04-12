@@ -22,7 +22,7 @@ steps:
   displayName: NPM Run Tests (Chrome Headless)
   inputs:
     command: 'custom'
-    customCommand: 'run e2e:ci' 
+    customCommand: 'run test:ci' 
 # - task: PowerShell@2
 #   inputs:
 #     filePath: 'node uiveri5 conf-ci.js'
