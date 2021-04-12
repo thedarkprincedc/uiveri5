@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "test": "uiveri5",
-    "e2e:ci": "uiveri5 conf-ci.js",
+    "test:ci": "uiveri5 conf-ci.js",
     "test:e2e": "uiveri5 --params.user=<user> --params.pass=<password> conf-ci.js"
   },
   "devDependencies": {
