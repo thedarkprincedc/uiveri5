@@ -12,9 +12,11 @@ pool:
 steps:
 
 - task: Npm@1
+  displayName: NPM Install
   inputs:
     command: 'install'
 - task: Npm@1
+  displayName: NPM Run Tests (Chrome Headless)
   inputs:
     command: 'custom'
     customCommand: 'test:e2e' 
