@@ -27,14 +27,8 @@ steps:
   inputs:
     command: 'custom'
     customCommand: "run test:ci -- --params.user=$(TEST_USER) --params.password='$(TEST_PASSWORD)'"
-# - task: PowerShell@2
-#   inputs:
-#     filePath: 'node uiveri5 conf-ci.js'
-#     failOnStderr: true
-#     arguments: 
-#      --params.user=$(user)
-#      --params.password=$(password)
 - task: PublishTestResults@2
+  displayName: Publish Test Results to Azure Devops
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: 'target/**/myReport.xml'
