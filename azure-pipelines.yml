@@ -10,17 +10,24 @@ pool:
   vmImage: ubuntu-latest
 variables:
   System.Debug: true
+  user: "rojwcocmewcwd"
+  password: "feomfomwojmwc"
 steps:
 
 - task: Npm@1
   displayName: NPM Install
   inputs:
     command: 'install'
+# - task: Npm@1
+#   displayName: NPM Run Tests (Chrome Headless)
+#   inputs:
+#     command: 'custom'
+#     customCommand: 'run e2e:ci' 
 - task: Npm@1
   displayName: NPM Run Tests (Chrome Headless)
   inputs:
     command: 'custom'
-    customCommand: 'run e2e:ci' 
+    customCommand: run test:ci -- -user $(user) -password '$(password)'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
