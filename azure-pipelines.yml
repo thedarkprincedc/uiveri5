@@ -23,11 +23,13 @@ steps:
 #   inputs:
 #     command: 'custom'
 #     customCommand: 'run e2e:ci' 
-- task: Npm@1
-  displayName: NPM Run Tests (Chrome Headless)
+- task: PowerShell@2
   inputs:
-    command: 'custom'
-    customCommand: run test:ci -- -user $(user) -password '$(password)'
+    filePath: 'uiveri5 conf-ci.js'
+    failOnStderr: true
+    arguments: 
+     -params.user=$(user)
+     -params.password=$(password)
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
