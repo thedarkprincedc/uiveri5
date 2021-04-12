@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 variables:
   System.Debug: true
-  group: test_user
+  group: HANA-DV1-TESTUSER
 steps:
 
 - task: Npm@1
