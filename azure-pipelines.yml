@@ -21,3 +21,7 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run e2e:ci' 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'target/**/myReport.xml'
