@@ -8,20 +8,33 @@ exports.config = {
         prefix: 'mySuitePrefix',
         postfix: 'mySuitePostfix'
     }],
+    
     browsers: [{
         browserName: 'chrome',
             capabilities: {
+                remoteWebDriverOptions: {
+                    maximized: false,
+                    browserSize: {
+                      width: 1920,
+                      height: 1067
+                    }
+                  },
             chromeOptions: {
-                  args: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-setuid-sandbox']
+                  args: ['--no-sandbox', 
+                  '--headless', 
+                  '--disable-gpu', 
+                  '--start-maximized',
+                  '--ignore-certificate-errors',
+                  '--disable-setuid-sandbox']
                 }
             }
         }
     ],
-    //useClassicalWaitForUI5: true
+    useClassicalWaitForUI5: false
     // timeouts: {
-    //     getPageTimeout: '10000',
-    //     allScriptsTimeout: '11000',
-    //     defaultTimeoutInterval: '30000'
+    //     getPageTimeout: '1000000',
+    //     //allScriptsTimeout: '11000',
+    //     //defaultTimeoutInterval: '30000'
     //   }
     // auth: {
     //     'sapcloud-form': {
