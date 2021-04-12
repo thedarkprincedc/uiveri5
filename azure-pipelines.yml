@@ -20,4 +20,4 @@ steps:
   displayName: NPM Run Tests (Chrome Headless)
   inputs:
     command: 'custom'
-    customCommand: 'test:e2e' 
+    customCommand: 'run test:e2e' 
